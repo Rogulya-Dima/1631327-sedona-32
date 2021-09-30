@@ -5,8 +5,143 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+      <nav class="main-menu page-header__main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link_current">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">О Седоне</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo page-header__logo">
+        <a class="logo__link">
+          <img class="logo__image" src="" alt="Логотип сайта Седона">
+        </a>
+      </div>
+      <ul class="user-menu page-header__user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="button user-menu__link" href="#">
+            <span class="visually-hidden">Хочу сюда!</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main class="index-main">
+      <section class="introduction index-main__introduction">
+        <h1 class="title introduction__title"> Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="subtitle introduction__subtitle"> Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </section>
+      <section class="benefits index-main__benefits">
+        <h2 class="visually-hidden">Преимущества города Седона.</h2>
+        <ul class="benefits__list">
+          <li class="benefits__item benefits__item_blue-background">
+            <!-- Юля, подскажи пожалуйста, может модификаторы  benefits__title_white-text, benefits__number_white-text
+              просто выделить в отдельный блок white-text и использовать его вместо модификаторов? То же самое касается
+               модификаторов фонового цвета в списках...-->
+            <h3 class="benefits__title benefits__title_white-text">Настоящий городок</h3>
+            <p class="benefits__number benefits__number_white-text">№1</p>
+            <p class="benefits__description benefits__description_white-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="benefits__image benefits__image_town" src="" alt="Классическое американское деревянное двухэтажное здание, на фоне зеленых деревьев и цветущих растений.">
+            <ul class="real-town-benefits benefits__real-town-benefits">
+              <li class="real-town-benefits__item real-town-benefits__item_housing real-town-benefits__item_background-#83B3D3-012">
+                <h3 class="real-town-benefits__title ">Жильё</h3>
+                <p class="real-town-benefits__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="real-town-benefits__item real-town-benefits__item_food">
+                <h3 class="real-town-benefits__title ">Еда</h3>
+                <p class="real-town-benefits__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="real-town-benefits__item real-town-benefits__item_souvenirs real-town-benefits__item_background-#83B3D3-012">
+                <h3 class="real-town-benefits__title">Сувениры</h3>
+                <p class="real-town-benefits__description">Не только китайского, но и настоящего местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li class="benefits__item benefits__item_blue-background">
+            <img class="benefits__image benefits__image_nature" src="" alt="Долина покрытая зеленой растительностью, окруженная красными высокими скалами с глубоким ущельем посредине.">
+            <h3 class="benefits__title benefits__title_white-text">Там есть мост дьявола</h3>
+            <p class="benefits__number benefits__number_white-text">№2</p>
+            <p class="benefits__description benefits__description_white-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </li>
+          <li class="benefits__item benefits__item_background-#83B3D3-012">
+            <h3 class="benefits__title">Небольшая площадь</h3>
+            <p class="benefits__number">№3</p>
+            <p class="benefits__description">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="benefits__item benefits__item_background-#83B3D3-020">
+            <h3 class="benefits__title">Красивая дорога</h3>
+            <p class="benefits__number">№4</p>
+            <p class="benefits__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="benefits__item benefits__item_background-#83B3D3-012">
+            <h3 class="benefits__title">Мало туристов</h3>
+            <p class="benefits__number">№5</p>
+            <p class="benefits__description">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+        </ul>
+      </section>
+      <section class="hotel-search index-main__hotel-search">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне.</h2>
+        <p class="title hotel-search__title">Заинтересовались?</p>
+        <p class="subtitle hotel-search__subtitle">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="button hotel-search__link" href="catalog.html">Поиск гостиницы в Седоне</a>
+      </section>
+      <section class="subscription index-main__subscription">
+        <h2 class="title subscription__title">Подпишитесь на рассылку</h2>
+        <p class="subtitle subscription__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <!-- Подскажи пожалуйста нужно ли здесь обернуть инпут в лейбл и задать ему название "Введите имейл",
+            а потом визуально скрыть, для доступности. Или достаточно будет плейсхолдера?-->
+          <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          <button class="subscription__button-submit" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <ul class="socials-list page-footer__socials-list">
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link_twitter" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link_facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link_youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <div class="contact-phone page-footer__contact-phone">
+        <span class="visually-hidden">Телефон для связи</span>
+        <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </div>
+      <!-- Подскажи пожалуйста, нужен ли див для обложки блока логотипа, или вместо дива можно использовать ссылку как обложку? -->
+      <div class="logo-site-developer page-footer__logo-site-developer">
+        <a class="logo-site-developer__link" href="https://htmlacademy.ru/">
+          <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
+
