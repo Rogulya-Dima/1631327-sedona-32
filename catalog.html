@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <!-- Юль вопрос,  по идее в хедере не должно быть заголовков, т.к. они будут нарушать порядок заголовков, потому что главный стоит в main. Но если мне захочется добавить доступности для скрин ридеров которые ориентируются на заголовки,
+      как мне тогда поступить, например если мне хочется добавить описание тегу nav, что это главное меню? Спомошью обычного параграфа, только визуально скрытого?-->
+      <nav class="main-menu page-header__main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">О Седоне</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link_current">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo page-header__logo">
+        <a class="logo__link">
+          <img class="logo__image" src="" alt="Логотип сайта Седона">
+        </a>
+      </div>
+      <ul class="user-menu page-header__user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="button user-menu__link" href="#">
+            <span class="visually-hidden">Хочу сюда!</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main class="catalog-main">
+      <section class="bread-crumbs catalog-main__bread-crumbs">
+        <h1 class="bread-crumbs__title">Гостиницы Седоны</h1>
+        <ul class="bread-crumbs__list">
+          <li class="bread-crumbs__item">
+            <span class="visually-hidden">Главная страница</span>
+          </li>
+          <li class="bread-crumbs__item">Гостиницы</li>
+        </ul>
+      </section>
+      <section class="searching-filter catalog-main__searching-filter">
+        <h2 class="visually-hidden">Фильтр поиска.</h2>
+        <form class="searching-filter__form" action="https://echo.htmlacademy.ru/" method="GET">
+          <ul class="searching-filter__list">
+            <li class="searching-filter__item">
+              <fieldset class="searching-filter__fieldset searching-filter__fieldset_infrastructure">
+                <legend class="searching-filter__legend">Инфраструктура:</legend>
+                 <ul class="searching-filter__list searching-filter__list">
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input checkbox" type="checkbox" name="pool" checked> Бассейн
+                    </label>
+                  </li>
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input checkbox" type="checkbox" name="parking" checked> Парковка
+                    </label>
+                  </li>
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input checkbox" type="checkbox" name="wi-fi"> Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li class="searching-filter__item">
+              <fieldset class="searching-filter__fieldset searching-filter__fieldset_housing">
+                <legend class="searching-filter__legend">Тип жилья:</legend>
+                <ul class="searching-filter__list">
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="hotel" checked> Гостиница
+                    </label>
+                  </li>
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="motel"> Мотель
+                    </label>
+                  </li>
+                  <li class="searching-filter__item">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="apartments"> Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li class="searching-filter__item">
+              <fieldset class="searching-filter__fieldset searching-filter__fieldset_price">
+                <legend class="searching-filter__legend">Стоимость, ₽:</legend>
+                <div class="searching-filter__price-controls">
+                  <label class="searching-filter__label">
+                    <input class="searching-filter__min-price-input opacity-0.3" type="number" name="min-price" value="0" min="0" max="9900" step="100"> от
+                  </label>
+                  <label class="searching-filter__label">
+                    <input class="searching-filter__max-price-input opacity-0.3" type="number" name="max-price" value="9000" min="100" max="10000" step="100"> до
+                  </label>
+                </div>
+                <div class="searching-filter__range-controls">
+                  <div class="searching-filter__scale">
+                    <div class="searching-filter__bar"></div>
+                  </div>
+                  <div class="searching-filter__toggle toggle-min"></div>
+                  <div class="searching-filter__toggle toggle-max"></div>
+                </div>
+              </fieldset>
+            </li>
+          </ul>
+          <button class="searching-filter__submit" type="submit">Применить</button>
+          <button class="searching-filter__reset" type="reset">Сбросить</button>
+        </form>
+      </section>
+      <section class="searching-results searching-results__catalog-main">
+        <h2 class="visually-hidden">Результаты поиска.</h2>
+        <p class="searching-results__text">Найдено гостиниц: 38</p>
+        <form class="searching-results__form" action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset>
+            <legend>
+              <span class="visually-hidden">Порядок сортировки отображения результатов на странице.</span>
+            </legend>
+            <select class="searching-results__select-list" name="order-of-display">
+              <option class="searching-results__select-option" value="min-price-first">Сначала дешевые</option>
+              <option class="searching-results__select-option" value="max-price-first">Сначала дорогие</option>
+            </select>
+        </fieldset>
+        </form>
+        <ul class="searching-results__list">
+          <li class="searching-results__item">
+            <button class="searching-results__button">
+              <span class="visually-hidden">Показать результаты в виде плиток.</span>
+            </button>
+          </li>
+          <li class="searching-results__item">
+            <button class="searching-results__button">
+              <span class="visually-hidden">Отобразить один результат с подробным описанием на всю страницу.</span>
+            </button>
+          </li>
+          <li class="searching-results__item searching-results__item_current">
+            <button class="searching-results__button">
+              <span class="visually-hidden">Показать результаты в виде таблицы.</span>
+            </button>
+          </li>
+        </ul>
+        <ol class="searching-results__ordered-list">
+          <li class="searching-results__ordered-item">
+            <img class="searching-results__ordered-item-image" src="" alt="">
+            <h3 class="searching-results__ordered-item-title">Amara Resort & Spa</h3>
+            <p class="searching-results__ordered-item-name">Гостиница</p>
+            <p class="searching-results__ordered-item-price">От 4000 ₽</p>
+            <a class="button searching-results__more_details" href="#">подробнее</a>
+            <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
+            <p class="searching-results__rating">Рейтинг: 8,5</p>
+          </li>
+          <li class="searching-results__ordered-list-item">
+            <img class="searching-results__ordered-list-image" src="" alt="">
+            <h3 class="searching-results__ordered-item-title">Desert Quail Inn</h3>
+            <p class="searching-results__ordered-item-name">Мотель</p>
+            <p class="searching-results__ordered-item-price">От 3000 ₽</p>
+            <a class="button searching-results__more_details" href="#">Подробнее</a>
+            <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
+            <p class="searching-results__rating">Рейтинг: 8,9</p>
+          </li>
+          <li class="searching-results__ordered-list-item">
+            <img class="searching-results__ordered-list-image" src="" alt="">
+            <h3 class="searching-results__ordered-item-title">Villas at Poco Diablo</h3>
+            <p class="searching-results__ordered-item-name">Апартаменты</p>
+            <p class="searching-results__ordered-item-price">От 2000 ₽</p>
+            <a class="button searching-results__more_details" href="#">Подробнее</a>
+            <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
+            <p class="searching-results__rating">Рейтинг: 9,2</p>
+          </li>
+          <li class="searching-results__ordered-list-item">
+            <img class="searching-results__ordered-list-image" src="" alt="">
+            <h3 class="searching-results__ordered-item-title">GreenTree Inn</h3>
+            <p class="searching-results__ordered-item-name">Гостиница</p>
+            <p class="searching-results__ordered-item-price">От 3000 ₽</p>
+            <a class="button searching-results__more_details" href="#">Подробнее</a>
+            <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
+            <p class="searching-results__rating">Рейтинг: 9,2</p>
+          </li>
+        </ol>
+        <button class="button searching-results__load-more" type="button">Загрузить еще</button>
+        <form action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset>
+            <legend class="searching-results__legend"> Гостиниц на странице:</legend>
+            <select class="searching-results__select-list" name="order-of-display">
+              <option class="searching-results__select-option" value="4">4</option>
+            </select>
+          </fieldset>
+        </form>
+        <section class="pagination searching-filter__pagination">
+          <h2 class="visually-hidden">Пагинация</h2>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">4</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">...</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">10</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="subscription catalog-main__subscription">
+        <h2 class="title subscription__title">Подпишитесь на рассылку</h2>
+        <p class="subtitle subscription__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          <button class="subscription__button-submit" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <ul class="socials-list page-footer__socials-list">
+        <li class="socials-list__item">
+          <a class="socials-list__link twitter" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <div class="contact-phone page-footer__contact-phone">
+        <span class="visually-hidden">Телефон для связи</span>
+        <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </div>
+      <!-- Подскажи пожалуйста, нужен ли див для обложки блока логотипа, или вместо дива можно использовать ссылку как обложку? -->
+      <div class="logo-site-developer page-footer__logo-site-developer">
+        <a class="logo-site-developer__link" href="https://htmlacademy.ru/">
+          <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
+
