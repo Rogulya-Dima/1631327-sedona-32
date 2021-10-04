@@ -19,11 +19,9 @@
           </li>
         </ul>
       </nav>
-      <div class="logo page-header__logo">
-        <a class="logo__link">
-          <img class="logo__image" src="" alt="Логотип сайта Седона">
-        </a>
-      </div>
+      <a class="logo page-header__logo">
+        <img class="logo__image" src="" alt="Логотип сайта Седона">
+      </a>
       <ul class="user-menu page-header__user-menu">
         <li class="user-menu__item">
           <a class="user-menu__link" href="#">
@@ -57,11 +55,11 @@
             <img class="benefits__image benefits__image_town" src="" alt="Классическое американское деревянное двухэтажное здание, на фоне зеленых деревьев и цветущих растений.">
             <ul class="real-town-benefits benefits__real-town-benefits">
               <li class="real-town-benefits__item housing blue-background-012">
-                <h3 class="real-town-benefits__title ">Жильё</h3>
+                <h3 class="real-town-benefits__title">Жильё</h3>
                 <p class="real-town-benefits__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="real-town-benefits__item food">
-                <h3 class="real-town-benefits__title ">Еда</h3>
+                <h3 class="real-town-benefits__title">Еда</h3>
                 <p class="real-town-benefits__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="real-town-benefits__item souvenirs blue-background-012">
@@ -103,9 +101,9 @@
         <h2 class="title subscription__title">Подпишитесь на рассылку</h2>
         <p class="subtitle subscription__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="POST">
-          <!-- Подскажи пожалуйста нужно ли здесь обернуть инпут в лейбл и задать ему название "Введите имейл",
-            а потом визуально скрыть, для доступности. Или достаточно будет плейсхолдера?-->
-          <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          <label>
+            <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          </label>
           <button class="subscription__button-submit" type="submit">Подписаться</button>
         </form>
       </section>
@@ -132,12 +130,9 @@
         <span class="visually-hidden">Телефон для связи</span>
         <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
-      <!-- Подскажи пожалуйста, нужен ли див для обложки блока логотипа, или вместо дива можно использовать ссылку как обложку? -->
-      <div class="logo-site-developer page-footer__logo-site-developer">
-        <a class="logo-site-developer__link" href="https://htmlacademy.ru/">
-          <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
-        </a>
-      </div>
+      <a class="logo-site-developer page-footer__logo-site-developer" href="https://htmlacademy.ru/">
+        <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
+      </a>
     </footer>
   </body>
 </html>

@@ -6,8 +6,6 @@
   </head>
   <body>
     <header class="page-header">
-      <!-- Юль вопрос,  по идее в хедере не должно быть заголовков, т.к. они будут нарушать порядок заголовков, потому что главный стоит в main. Но если мне захочется добавить доступности для скрин ридеров которые ориентируются на заголовки,
-      как мне тогда поступить, например если мне хочется добавить описание тегу nav, что это главное меню? Спомошью обычного параграфа, только визуально скрытого?-->
       <nav class="main-menu page-header__main-menu">
         <ul class="main-menu__list">
           <li class="main-menu__item">
@@ -21,11 +19,9 @@
           </li>
         </ul>
       </nav>
-      <div class="logo page-header__logo">
-        <a class="logo__link">
-          <img class="logo__image" src="" alt="Логотип сайта Седона">
-        </a>
-      </div>
+      <a class="logo page-header__logo">
+        <img class="logo__image" src="" alt="Логотип сайта Седона">
+      </a>
       <ul class="user-menu page-header__user-menu">
         <li class="user-menu__item">
           <a class="user-menu__link" href="#">
@@ -143,59 +139,59 @@
         </form>
         <ul class="searching-results__list">
           <li class="searching-results__item">
-            <button class="searching-results__button">
+            <button class="searching-results__button" type="button">
               <span class="visually-hidden">Показать результаты в виде плиток.</span>
             </button>
           </li>
           <li class="searching-results__item">
-            <button class="searching-results__button">
+            <button class="searching-results__button" type="button">
               <span class="visually-hidden">Отобразить один результат с подробным описанием на всю страницу.</span>
             </button>
           </li>
           <li class="searching-results__item searching-results__item_current">
-            <button class="searching-results__button">
+            <button class="searching-results__button" type="button">
               <span class="visually-hidden">Показать результаты в виде таблицы.</span>
             </button>
           </li>
         </ul>
-        <ol class="searching-results__ordered-list">
-          <li class="searching-results__ordered-item">
-            <img class="searching-results__ordered-item-image" src="" alt="">
-            <h3 class="searching-results__ordered-item-title">Amara Resort & Spa</h3>
-            <p class="searching-results__ordered-item-name">Гостиница</p>
-            <p class="searching-results__ordered-item-price">От 4000 ₽</p>
+        <ul class="searching-results__list">
+          <li class="searching-results__item">
+            <img class="searching-results__item-image" src="" alt="">
+            <h3 class="searching-results__item-title">Amara Resort & Spa</h3>
+            <p class="searching-results__item-name">Гостиница</p>
+            <p class="searching-results__item-price">От 4000 ₽</p>
             <a class="button searching-results__more_details" href="#">подробнее</a>
             <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 8,5</p>
           </li>
-          <li class="searching-results__ordered-list-item">
-            <img class="searching-results__ordered-list-image" src="" alt="">
-            <h3 class="searching-results__ordered-item-title">Desert Quail Inn</h3>
-            <p class="searching-results__ordered-item-name">Мотель</p>
-            <p class="searching-results__ordered-item-price">От 3000 ₽</p>
+          <li class="searching-results__list-item">
+            <img class="searching-results__list-image" src="" alt="">
+            <h3 class="searching-results__item-title">Desert Quail Inn</h3>
+            <p class="searching-results__item-name">Мотель</p>
+            <p class="searching-results__item-price">От 3000 ₽</p>
             <a class="button searching-results__more_details" href="#">Подробнее</a>
             <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 8,9</p>
           </li>
-          <li class="searching-results__ordered-list-item">
-            <img class="searching-results__ordered-list-image" src="" alt="">
-            <h3 class="searching-results__ordered-item-title">Villas at Poco Diablo</h3>
-            <p class="searching-results__ordered-item-name">Апартаменты</p>
-            <p class="searching-results__ordered-item-price">От 2000 ₽</p>
+          <li class="searching-results__list-item">
+            <img class="searching-results__list-image" src="" alt="">
+            <h3 class="searching-results__item-title">Villas at Poco Diablo</h3>
+            <p class="searching-results__item-name">Апартаменты</p>
+            <p class="searching-results__item-price">От 2000 ₽</p>
             <a class="button searching-results__more_details" href="#">Подробнее</a>
             <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
-          <li class="searching-results__ordered-list-item">
-            <img class="searching-results__ordered-list-image" src="" alt="">
-            <h3 class="searching-results__ordered-item-title">GreenTree Inn</h3>
-            <p class="searching-results__ordered-item-name">Гостиница</p>
-            <p class="searching-results__ordered-item-price">От 3000 ₽</p>
+          <li class="searching-results__list-item">
+            <img class="searching-results__list-image" src="" alt="">
+            <h3 class="searching-results__item-title">GreenTree Inn</h3>
+            <p class="searching-results__item-name">Гостиница</p>
+            <p class="searching-results__item-price">От 3000 ₽</p>
             <a class="button searching-results__more_details" href="#">Подробнее</a>
             <button class="button searching-results__to-favorites blue-background" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
-        </ol>
+        </ul>
         <button class="button searching-results__load-more" type="button">Загрузить еще</button>
         <form action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset>
@@ -233,7 +229,9 @@
         <h2 class="title subscription__title">Подпишитесь на рассылку</h2>
         <p class="subtitle subscription__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="POST">
-          <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          <label>
+            <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
+          </label>
           <button class="subscription__button-submit" type="submit">Подписаться</button>
         </form>
       </section>
@@ -260,12 +258,9 @@
         <span class="visually-hidden">Телефон для связи</span>
         <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
-      <!-- Подскажи пожалуйста, нужен ли див для обложки блока логотипа, или вместо дива можно использовать ссылку как обложку? -->
-      <div class="logo-site-developer page-footer__logo-site-developer">
-        <a class="logo-site-developer__link" href="https://htmlacademy.ru/">
-          <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
-        </a>
-      </div>
+      <a class="logo-site-developer page-footer__logo-site-developer" href="https://htmlacademy.ru/">
+        <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
+      </a>
     </footer>
   </body>
 </html>
