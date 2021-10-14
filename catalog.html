@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-menu">
-        <ul class="main-menu__list">
+        <ul class="main-menu__list list-reset">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="index.html">Главная</a>
+            <a class="main-menu__link link-reset" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">О Седоне</a>
+            <a class="main-menu__link link-reset" href="#">О Седоне</a>
           </li>
           <li class="main-menu__item">
             <a class="main-menu__link main-menu__link_current">Гостиницы</a>
@@ -20,9 +21,9 @@
         </ul>
       </nav>
       <a class="logo">
-        <img class="logo__image" src="" alt="Логотип сайта Седона">
+        <img class="logo__image" src="img/logo/logo-sedona.svg" width="138" height="70" alt="Логотип сайта Седона">
       </a>
-      <ul class="user-menu">
+      <ul class="user-menu list-reset">
         <li class="user-menu__item">
           <a class="user-menu__link" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -34,95 +35,95 @@
           </a>
         </li>
         <li class="user-menu__item">
-          <a class="button user-menu__link" href="#">
-            <span class="visually-hidden">Хочу сюда!</span>
-          </a>
+          <a class="user-menu__link link-reset button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </header>
     <main class="catalog-main">
-      <section class="bread-crumbs">
-        <h1 class="bread-crumbs__title">Гостиницы Седоны</h1>
-        <ul class="bread-crumbs__list">
-          <li class="bread-crumbs__item">
-            <span class="visually-hidden">Главная страница</span>
-          </li>
-          <li class="bread-crumbs__item">Гостиницы</li>
-        </ul>
-      </section>
-      <section class="searching-filter">
-        <h2 class="visually-hidden">Фильтр поиска.</h2>
-        <form class="searching-filter__form" action="https://echo.htmlacademy.ru/" method="GET">
-          <ul class="searching-filter__list">
-            <li class="searching-filter__item">
-              <fieldset class="searching-filter__fieldset infrastructure">
-                <legend class="searching-filter__legend">Инфраструктура:</legend>
-                 <ul class="searching-filter__list">
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input checkbox" type="checkbox" name="pool" checked> Бассейн
-                    </label>
-                  </li>
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input checkbox" type="checkbox" name="parking" checked> Парковка
-                    </label>
-                  </li>
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input checkbox" type="checkbox" name="wi-fi"> Wi-Fi
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+      <div class="bread-crumbs-and-searching-filter-wrapper">
+        <section class="bread-crumbs">
+          <h1 class="bread-crumbs__title">Гостиницы Седоны</h1>
+          <ul class="bread-crumbs__list list-reset">
+            <li class="bread-crumbs__item">
+              <span class="visually-hidden">Главная страница</span>
             </li>
-            <li class="searching-filter__item">
-              <fieldset class="searching-filter__fieldset housing">
-                <legend class="searching-filter__legend">Тип жилья:</legend>
-                <ul class="searching-filter__list">
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="hotel" checked> Гостиница
-                    </label>
-                  </li>
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="motel"> Мотель
-                    </label>
-                  </li>
-                  <li class="searching-filter__item">
-                    <label class="searching-filter__label">
-                      <input class="searching-filter__input radio" type="radio" name="housing-type" value="apartments"> Апартаменты
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </li>
-            <li class="searching-filter__item">
-              <fieldset class="searching-filter__fieldset price">
-                <legend class="searching-filter__legend">Стоимость, ₽:</legend>
-                <div class="searching-filter__price-controls">
-                  <label class="searching-filter__label">
-                    <input class="searching-filter__min-price-input" type="number" name="min-price" value="0" min="0" max="9900" step="100"> от
-                  </label>
-                  <label class="searching-filter__label">
-                    <input class="searching-filter__max-price-input" type="number" name="max-price" value="9000" min="100" max="10000" step="100"> до
-                  </label>
-                </div>
-                <div class="searching-filter__range-controls">
-                  <div class="searching-filter__scale">
-                    <div class="searching-filter__bar"></div>
-                  </div>
-                  <div class="searching-filter__toggle toggle-min"></div>
-                  <div class="searching-filter__toggle toggle-max"></div>
-                </div>
-              </fieldset>
-            </li>
+            <li class="bread-crumbs__item">Гостиницы</li>
           </ul>
-          <button class="searching-filter__submit" type="submit">Применить</button>
-          <button class="searching-filter__reset" type="reset">Сбросить</button>
-        </form>
-      </section>
+        </section>
+        <section class="searching-filter">
+          <h2 class="visually-hidden">Фильтр поиска.</h2>
+          <form class="searching-filter__form" action="https://echo.htmlacademy.ru/" method="GET">
+            <ul class="searching-filter__list list-reset">
+              <li class="searching-filter__item">
+                <fieldset class="searching-filter__fieldset infrastructure">
+                  <legend class="searching-filter__legend">Инфраструктура:</legend>
+                   <ul class="searching-filter__list list-reset">
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input checkbox" type="checkbox" name="pool" checked> Бассейн
+                      </label>
+                    </li>
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input checkbox" type="checkbox" name="parking" checked> Парковка
+                      </label>
+                    </li>
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input checkbox" type="checkbox" name="wi-fi"> Wi-Fi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="searching-filter__item">
+                <fieldset class="searching-filter__fieldset housing">
+                  <legend class="searching-filter__legend">Тип жилья:</legend>
+                  <ul class="searching-filter__list list-reset">
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input radio" type="radio" name="housing-type" value="hotel" checked> Гостиница
+                      </label>
+                    </li>
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input radio" type="radio" name="housing-type" value="motel"> Мотель
+                      </label>
+                    </li>
+                    <li class="searching-filter__item">
+                      <label class="searching-filter__label">
+                        <input class="searching-filter__input radio" type="radio" name="housing-type" value="apartments"> Апартаменты
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="searching-filter__item">
+                <fieldset class="searching-filter__fieldset price">
+                  <legend class="searching-filter__legend">Стоимость, ₽:</legend>
+                  <div class="searching-filter__price-controls">
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__min-price-input" type="number" name="min-price" value="0" min="0" max="9900" step="100"> от
+                    </label>
+                    <label class="searching-filter__label">
+                      <input class="searching-filter__max-price-input" type="number" name="max-price" value="9000" min="100" max="10000" step="100"> до
+                    </label>
+                  </div>
+                  <div class="searching-filter__range-controls">
+                    <div class="searching-filter__scale">
+                      <div class="searching-filter__bar"></div>
+                    </div>
+                    <div class="searching-filter__toggle toggle-min"></div>
+                    <div class="searching-filter__toggle toggle-max"></div>
+                  </div>
+                </fieldset>
+              </li>
+            </ul>
+            <button class="searching-filter__submit button" type="submit">Применить</button>
+            <button class="searching-filter__reset" type="reset">Сбросить</button>
+          </form>
+        </section>
+      </div>
       <section class="searching-results">
         <h2 class="visually-hidden">Результаты поиска.</h2>
         <p class="searching-results__text">Найдено гостиниц: 38</p>
@@ -137,7 +138,7 @@
             </select>
         </fieldset>
         </form>
-        <ul class="searching-results__list">
+        <ul class="searching-results__list list-reset">
           <li class="searching-results__item">
             <button class="searching-results__button" type="button">
               <span class="visually-hidden">Показать результаты в виде плиток.</span>
@@ -145,7 +146,7 @@
           </li>
           <li class="searching-results__item">
             <button class="searching-results__button" type="button">
-              <span class="visually-hidden">Отобразить один результат с подробным описанием на всю страницу.</span>
+              <span class="visually-hidden">Показать один результат с подробным описанием на всю страницу.</span>
             </button>
           </li>
           <li class="searching-results__item searching-results__item_current">
@@ -154,45 +155,45 @@
             </button>
           </li>
         </ul>
-        <ul class="searching-results__list">
+        <ul class="searching-results__list list-reset">
           <li class="searching-results__item">
-            <img class="searching-results__item-image" src="" alt="Здание гостиницы, на склоне красной скалы.">
+            <img class="searching-results__item-image" src="img/searching-results/amara-resort.jpg" width="180" height="120" alt="Здание гостиницы, на склоне красной скалы.">
             <h3 class="searching-results__item-title">Amara Resort & Spa</h3>
             <p class="searching-results__item-name">Гостиница</p>
             <p class="searching-results__item-price">От 4000 ₽</p>
-            <a class="searching-results__more-details button" href="#">подробнее</a>
+            <a class="searching-results__more-details button link-reset" href="#">подробнее</a>
             <button class="searching-results__to-favorites button" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 8,5</p>
           </li>
           <li class="searching-results__list-item">
-            <img class="searching-results__list-image" src="" alt="Здание отеля в зеленой долине, на фоне скал.">
+            <img class="searching-results__list-image" src="img/searching-results/desert-quail.jpg" width="180" height="120" alt="Здание отеля в зеленой долине, на фоне скал.">
             <h3 class="searching-results__item-title">Desert Quail Inn</h3>
             <p class="searching-results__item-name">Мотель</p>
             <p class="searching-results__item-price">От 3000 ₽</p>
-            <a class="searching-results__more-details button" href="#">Подробнее</a>
+            <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
             <button class="searching-results__to-favorites button" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 8,9</p>
           </li>
           <li class="searching-results__list-item">
-            <img class="searching-results__list-image" src="" alt="Красные скалы, у подножья которых зеленая роща.">
+            <img class="searching-results__list-image" src="img/searching-results/poco-diablo.jpg" width="180" height="120" alt="Красные скалы, у подножья которых зеленая роща.">
             <h3 class="searching-results__item-title">Villas at Poco Diablo</h3>
             <p class="searching-results__item-name">Апартаменты</p>
             <p class="searching-results__item-price">От 2000 ₽</p>
-            <a class="searching-results__more-details button" href="#">Подробнее</a>
-            <button class="searching-results__to-favorites button" type="button">В избранное</button>
+            <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
+            <button class="searching-results__to-favorites in-favorites button" type="button">В избранном</button>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
           <li class="searching-results__list-item">
-            <img class="searching-results__list-image" src="" alt="Серпантин, по средине горного леса.">
+            <img class="searching-results__list-image" src="img/searching-results/green-tree.jpg" width="180" height="120" alt="Серпантин, по средине горного леса.">
             <h3 class="searching-results__item-title">GreenTree Inn</h3>
             <p class="searching-results__item-name">Гостиница</p>
             <p class="searching-results__item-price">От 3000 ₽</p>
-            <a class="searching-results__more-details button" href="#">Подробнее</a>
+            <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
             <button class="searching-results__to-favorites button" type="button">В избранное</button>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
         </ul>
-        <button class="button searching-results__load-more" type="button">Загрузить еще</button>
+        <button class="searching-results__load-more button" type="button">Загрузить еще</button>
         <form action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset>
             <legend class="searching-results__legend"> Гостиниц на странице:</legend>
@@ -203,24 +204,24 @@
         </form>
         <section class="pagination">
           <h2 class="visually-hidden">Пагинация</h2>
-          <ul class="pagination__list">
+          <ul class="pagination__list list-reset">
             <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
+              <a class="pagination__link pagination__link_current link-reset">1</a>
             </li>
             <li class="pagination__item">
-              <a href="#">2</a>
+              <a class="pagination__link link-reset" href="#">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
+              <a class="pagination__link link-reset" href="#">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
+              <a class="pagination__link link-reset" href="#">4</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">...</a>
+              <a class="pagination__link link-reset" href="#">...</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">10</a>
+              <a class="pagination__link link-reset" href="#">10</a>
             </li>
           </ul>
         </section>
@@ -237,20 +238,20 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="socials-list">
+      <ul class="socials-list list-reset">
         <li class="socials-list__item">
-          <a class="socials-list__link twitter" href="https://twitter.com/htmlacademy_ru">
-            <span class="visually-hidden">Твиттер</span>
+          <a class="socials-list__link twitter" href="https://twitter.com/htmlacademy_ru" target="blank">
+            <img src="/img/socials/twitter.svg" width="18" height="15" alt="Твиттер.">
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link facebook" href="https://www.facebook.com/htmlacademy">
-            <span class="visually-hidden">Фейсбук</span>
+          <a class="socials-list__link facebook" href="https://www.facebook.com/htmlacademy" target="blank">
+            <img src="/img/socials/facebook.svg" width="10" height="18" alt="Фейсбук.">
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Ютуб</span>
+          <a class="socials-list__link youtube" href="https://www.youtube.com/user/htmlacademyru" target="blank">
+            <img src="/img/socials/youtube.svg" width="20" height="16" alt="Ютуб.">
           </a>
         </li>
       </ul>
@@ -259,7 +260,7 @@
         <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
       <a class="logo-site-developer" href="https://htmlacademy.ru/">
-        <img class="logo-site-developer__image" src="" alt="Логотип студии разработчика сайта htmlacademy">
+        <img class="logo-site-developer__image" src="img/logo/logo-htmlacademy.svg" width="115" height="34" alt="Логотип студии разработчика сайта htmlacademy">
       </a>
     </footer>
   </body>

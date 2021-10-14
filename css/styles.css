@@ -1,0 +1,395 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables */
+:root {
+  --basic-black: #000000;
+  --basic-black06:rgba(0, 0, 0, 0.6);
+  --basic-white: #FFFFFF;
+  --basic-white03: rgb(255, 255, 255, 0.3);
+  --basic-dark: #333333;
+  --basic-gray: #E6E6E6;
+  --basic-light: #F2F2F2;
+  --special-cold-light: #83b3d3;
+  --special-cold-light12: rgba(131, 179, 211, 0.12);
+  --special-cold-light20: rgba(131, 179, 211, 0.2);
+  --special-warm-light: #756257;
+  --special-neutral-light: #7DB54F;
+  --background-introduction: #243a48;
+  --background-subscription: #8fadba;
+  --background-subscription-input:#F2F2F2;
+}
+
+/* Global styles*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color:var(--basic-black);
+
+  background-color:var(--basic-white);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.button {
+  font-family: inherit;
+  color: var(--basic-white);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: var(--special-warm-light);
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* header */
+
+.main-menu__link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+.user-menu__link {
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+/* index-main */
+
+.introduction__banner {
+  width: 1200px;
+  height: 485px;
+
+  background-image: url(../img/backgrounds/welcome.svg),
+                    url(../img/backgrounds/introduction.jpg);
+  background-repeat: no-repeat;
+  background-position: center,
+                       0 0;
+  background-size: auto auto,
+                   100% auto;
+  background-color:var(--background-introduction);
+
+}
+
+.benefits__item:nth-child(1) .benefits__item-text-wrapper,
+.benefits__item:nth-child(2) .benefits__item-text-wrapper{
+  background-color:var(--special-cold-light);
+}
+
+.benefits__item:nth-child(3),
+.benefits__item:nth-child(5){
+  background-color:var(--special-cold-light12);
+}
+.benefits__item:nth-child(4) {
+  background-color:var(--special-cold-light20);
+}
+
+.benefits__title,
+.real-town-benefits__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.benefits__item:nth-child(1) .benefits__title,
+.benefits__item:nth-child(2) .benefits__title {
+  color: var(--basic-white);
+}
+.benefits__number,
+.benefits__description,
+.real-town-benefits__description {
+  text-align: center;
+}
+.benefits__item:nth-child(1) .benefits__number,
+.benefits__item:nth-child(2) .benefits__number,
+.benefits__item:nth-child(1) .benefits__description,
+.benefits__item:nth-child(2) .benefits__description {
+    color: var(--basic-white);
+}
+
+.real-town-benefits {
+  background-color: var(--basic-white);
+}
+
+.real-town-benefits__item:nth-child(1),
+.real-town-benefits__item:nth-child(3) {
+  background-color: var(--special-cold-light12);
+}
+
+.hotel-search__link {
+  font-size: 20px;
+  line-height: 36px;
+  color: var(--basic-white);
+}
+
+.subscription {
+  width: 1200px;
+  height: 411px;
+
+  background-image: url(../img/backgrounds/subscrubes.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-color:var(--background-subscription);
+}
+
+.subscription__title,
+.subscription__subtitle {
+  color: var(--basic-white);
+}
+
+.subscription__input {
+  line-height: 26px;
+  font-size: 18px;
+
+  background-color: var(--background-subscription-input);
+}
+
+.subscription__input::-webkit-input-placeholder {
+  line-height: 26px;
+  color: var(--basic-black06);
+}
+.subscription__input::-moz-placeholder {
+  line-height: 26px;
+  color: var(--basic-black06);
+}
+.subscription__input:-ms-input-placeholder {
+  line-height: 26px;
+  color: var(--basic-black06);
+}
+.subscription__input::-ms-input-placeholder {
+  line-height: 26px;
+  color: var(--basic-black06);
+}
+.subscription__input::placeholder {
+  line-height: 26px;
+  color: var(--basic-black06);
+}
+
+.subscription__button-submit {
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--basic-white);
+
+  border: none;
+  background-color: var(--special-cold-light);
+}
+
+/* Footer */
+
+.contact-phone__link {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color:var(--basic-black);
+
+  text-decoration: none;
+}
+
+/* catalog-main */
+
+.bread-crumbs-and-searching-filter-wrapper {
+  width: 1200px;
+  /* height: 408px; */
+  /* Увеличен размер, на время, для того чтобы были видны шрифты поля стоимость, оригинал закомментирован выше */
+  height: 480px;
+  background-image: url(../img/backgrounds/searching-filter.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-color:var(--basic-black06);
+}
+
+.bread-crumbs__title {
+  font-size: 60px;
+  line-height: 78px;
+  color: var(--basic-white);
+}
+
+.bread-crumbs__item {
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+.searching-filter__legend {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--basic-white);
+}
+
+.searching-filter__label {
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+}
+
+.searching-filter__min-price-input,
+.searching-filter__max-price-input {
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+
+  background-color: inherit;
+}
+
+.searching-filter__fieldset.price .searching-filter__label {
+  color: var(--basic-white03);
+}
+
+.searching-filter__submit {
+  font-size: 16px;
+  line-height: 21px;
+  background-color: var(--special-cold-light);
+}
+
+.searching-filter__reset {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+
+  border: none;
+  background-color: inherit;
+}
+
+.searching-results__text {
+font-weight: 700;
+font-size: 30px;
+line-height: 39px;
+text-transform: uppercase;
+}
+
+.searching-results__select-option {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-dark);
+}
+
+.searching-results__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.searching-results__item-name,
+.searching-results__item-price {
+  line-height: 23px;
+  color: var(--basic-dark);
+}
+
+.searching-results__more-details {
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+.searching-results__to-favorites {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  background-color: var(--special-cold-light);
+}
+
+.searching-results__to-favorites.in-favorites {
+  background-color: var(--special-neutral-light);
+}
+
+.searching-results__rating {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: var(--basic-light);
+}
+
+.searching-results__load-more {
+  font-size: 20px;
+  line-height: 26px;
+
+  background-color: var(--special-cold-light);
+}
+
+.searching-results__legend {
+  line-height: 23px;
+}
+
+.pagination__link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--basic-white);
+
+  background-color: var(--special-cold-light);
+}
+
+.pagination__link_current {
+  color: var(--basic-black);
+  background-color: var(--basic-light);
+}
+
+.catalog-main .subscription {
+  background-image: none;
+  background-color: inherit;
+}
+
+.catalog-main .subscription__title,
+.catalog-main .subscription__subtitle {
+  color: var(--basic-black);
+}
