@@ -1,13 +1,13 @@
 @font-face {
   font-family: "PT Sans";
-  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
-  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -47,7 +47,17 @@
   overflow: hidden;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -59,6 +69,9 @@ body {
 }
 
 .title {
+  margin: 0;
+  padding: 0;
+
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -95,38 +108,116 @@ body {
   list-style: none;
 }
 
+.fieldset-reset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
 /* header */
+
+.page-header {
+  display: flex ;
+  padding: 0 71px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.main-menu {
+  width: 310px;
+  margin-right: 150px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.main-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-menu__item {
+  margin-right: auto;
+}
+
+.main-menu__item:nth-child(3n) {
+  margin-right: 0;
+}
 
 .main-menu__link {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
 }
+
+.logo {
+  display: block;
+  width: 138px;
+  margin: 0;
+  margin-right: auto;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.user-menu {
+  width: 250px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
 .user-menu__link {
+  display: inline-block;
+  width: 165px;
   font-size: 16px;
   color: var(--basic-white);
 }
 
 /* index-main */
 
+.index-main {
+  flex-grow: 1;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
 .introduction__banner {
-  width: 1200px;
   height: 485px;
 
-  background-image: url(../img/backgrounds/welcome.svg),
-                    url(../img/backgrounds/introduction.jpg);
+  background-image: url("../img/backgrounds/welcome.svg"),
+                    url("../img/backgrounds/introduction.jpg");
   background-repeat: no-repeat;
   background-position: center,
                        0 0;
   background-size: auto auto,
                    100% auto;
   background-color:var(--background-introduction);
-
 }
 
-.benefits__item:nth-child(1) .benefits__item-text-wrapper,
-.benefits__item:nth-child(2) .benefits__item-text-wrapper{
-  background-color:var(--special-cold-light);
+.introduction__title {
+  width: 720px;
+  margin: 0 auto;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.introduction__subtitle {
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits__item.real-town {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .benefits__item:nth-child(3),
@@ -137,8 +228,58 @@ body {
   background-color:var(--special-cold-light20);
 }
 
+.benefits__item-text-wrapper {
+  width: 400px;
+  min-height: 384px;
+}
+
+.benefits__item:nth-child(1) .benefits__item-text-wrapper,
+.benefits__item:nth-child(2) .benefits__item-text-wrapper{
+  background-color:var(--special-cold-light);
+}
+
+/* Юль вопрос:нужно ли указывать размеры изображения в ЦСС, если
+они уже указаны в HTML коде, говорят в ЦСС размеры указываются
+для подстраховки. Если ты в курсе для какой подстраховки и как этот
+механизм работает, объясни пожалуйста. */
+.benefits__image {
+  width: 800px;
+  height: 384px;
+}
+
+.real-town-benefits-list {
+  display:flex;
+  flex-wrap: wrap;
+
+  background-color: var(--basic-white);
+}
+
+.real-town-benefits-list__item:nth-child(1),
+.real-town-benefits-list__item:nth-child(3) {
+  background-color: var(--special-cold-light12);
+}
+
+.real-town-benefits-list__item {
+  width: 400px;
+  min-height: 384px;
+}
+
+.benefits__item.bridge {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits__item.area,
+.benefits__item.road,
+.benefits__item.tourists {
+  width: 400px;
+  min-height: 384px;
+}
+
 .benefits__title,
-.real-town-benefits__title {
+.real-town-benefits-list__title {
+  width: 171px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -146,15 +287,39 @@ body {
   text-transform: uppercase;
   color: var(--basic-black);
 }
+
 .benefits__item:nth-child(1) .benefits__title,
 .benefits__item:nth-child(2) .benefits__title {
   color: var(--basic-white);
 }
+
 .benefits__number,
 .benefits__description,
-.real-town-benefits__description {
+.real-town-benefits-list__description {
+  margin: 0 auto;
   text-align: center;
 }
+
+.benefits__description {
+  width: 250px;
+}
+
+.benefits__item.real-town .benefits__description {
+  width: 220px;
+}
+
+.real-town-benefits-list__item.housing .real-town-benefits-list__description {
+  width: 170px;
+}
+
+.real-town-benefits-list__item.food .real-town-benefits-list__description {
+  width: 230px;
+}
+
+.real-town-benefits-list__item.souvenirs .real-town-benefits-list__description {
+  width: 210px;
+}
+
 .benefits__item:nth-child(1) .benefits__number,
 .benefits__item:nth-child(2) .benefits__number,
 .benefits__item:nth-child(1) .benefits__description,
@@ -162,38 +327,77 @@ body {
     color: var(--basic-white);
 }
 
-.real-town-benefits {
-  background-color: var(--basic-white);
+.hotel-search {
+  min-height: 417px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
-.real-town-benefits__item:nth-child(1),
-.real-town-benefits__item:nth-child(3) {
-  background-color: var(--special-cold-light12);
+.hotel-search__subtitle {
+  width: 720px;
+  margin: 0 auto;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .hotel-search__link {
+  display: block;
+  width: 575px;
+  margin: 0 auto;
+
   font-size: 20px;
   line-height: 36px;
   color: var(--basic-white);
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .subscription {
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
 
-  background-image: url(../img/backgrounds/subscrubes.jpg);
+  background-image: url("../img/backgrounds/subscrubes.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
   background-color:var(--background-subscription);
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .subscription__title,
 .subscription__subtitle {
   color: var(--basic-white);
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.subscription__subtitle {
+  width: 470px;
+  margin: 0 auto;
+}
+
+.subscription__form {
+  width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .subscription__input {
+  box-sizing: border-box;
+  width: 600px;
+  padding: 0 22px;
+
+  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   font-size: 18px;
 
@@ -222,9 +426,12 @@ body {
 }
 
 .subscription__button-submit {
+  width: 200px;
+
   font-size: 20px;
   line-height: 26px;
   color: var(--basic-white);
+  text-transform: uppercase;
 
   border: none;
   background-color: var(--special-cold-light);
@@ -232,6 +439,31 @@ body {
 
 /* Footer */
 
+.page-footer {
+  display: flex;
+
+  padding: 0 72px;
+}
+
+.page-footer__socials-list {
+  width: 107px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+.socials-list__item {
+  margin-right: auto;
+}
+.socials-list__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.page-footer__contact-phone {
+  margin: 0 auto;
+}
 .contact-phone__link {
   font-size: 40px;
   line-height: 40px;
@@ -239,16 +471,30 @@ body {
   color:var(--basic-black);
 
   text-decoration: none;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.logo-site-developer__image {
+  width: 115px;
+  height: 34px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 /* catalog-main */
 
+.catalog-main {
+  flex-grow: 1;
+}
+
 .bread-crumbs-and-searching-filter-wrapper {
-  width: 1200px;
-  /* height: 408px; */
-  /* Увеличен размер, на время, для того чтобы были видны шрифты поля стоимость, оригинал закомментирован выше */
-  height: 480px;
-  background-image: url(../img/backgrounds/searching-filter.jpg);
+  min-height: 408px;
+  padding: 0 71px;
+
+  background-image: url("../img/backgrounds/searching-filter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
@@ -256,6 +502,8 @@ body {
 }
 
 .bread-crumbs__title {
+  margin: 0;
+
   font-size: 60px;
   line-height: 78px;
   color: var(--basic-white);
@@ -264,6 +512,45 @@ body {
 .bread-crumbs__item {
   font-size: 16px;
   color: var(--basic-white);
+}
+
+.searching-filter__form {
+  display: flex;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-filter__list {
+  display: flex;
+  width: 827px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-filter__item {
+  min-height: 150px;
+}
+
+.searching-filter__item.infrastructure,
+.searching-filter__item.housing {
+  width: 155px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-filter__item.infrastructure {
+  margin-right: 60px;
+}
+
+.searching-filter__item.price {
+  width: 297px;
+  margin-left: auto;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .searching-filter__legend {
@@ -279,6 +566,28 @@ body {
   color: var(--basic-white);
 }
 
+.searching-filter__scale {
+  width: 287px;
+  height: 4px;
+
+  background-color: var(--basic-white03);
+}
+
+.searching-filter__bar {
+  width: 227px;
+  height: 4px;
+
+  background-color: var(--basic-white);
+}
+
+.searching-filter__toggle {
+  width: 20px;
+  height: 20px;
+
+  background-color: var(--basic-white);
+  border-radius: 5px;
+}
+
 .searching-filter__min-price-input,
 .searching-filter__max-price-input {
   font-size: 18px;
@@ -290,6 +599,13 @@ body {
 
 .searching-filter__fieldset.price .searching-filter__label {
   color: var(--basic-white03);
+}
+
+.searching-filter__button-wrapper {
+  width: 160px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .searching-filter__submit {
@@ -308,18 +624,108 @@ body {
   background-color: inherit;
 }
 
-.searching-results__text {
-font-weight: 700;
-font-size: 30px;
-line-height: 39px;
-text-transform: uppercase;
+.searching-results {
+  padding: 0 71px;
 }
 
-.searching-results__select-option {
+.searching-results__head-wrapper {
+  display: flex;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__text {
+  width: 340px;
+  margin: 0;
+  margin-right: 190px;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__display-price-list {
+  width: 285px;
+  padding: 0 20px;
+}
+
+.searching-results__form {
+  margin-right: 85px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__form fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.searching-results__display-price-list {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
   color: var(--basic-dark);
+}
+
+.searching-results__display-list {
+  width: 160px;
+  display: flex;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__display-item {
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__display-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.searching-results__list {
+  width: 1056px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__list-item {
+  display: flex;
+  min-height: 181px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.searching-results__item-image {
+  width: 180px;
+  height: 120px;
+
+  margin-right: 36px;
+}
+
+.searching-results__info-wrapper {
+  min-width: 320px;
+  flex-grow: 1;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .searching-results__item-title {
@@ -335,11 +741,17 @@ text-transform: uppercase;
 }
 
 .searching-results__more-details {
+  display: inline-block;
+  width: 151px;
+
   font-size: 16px;
   color: var(--basic-white);
 }
 
 .searching-results__to-favorites {
+  display: inline-block;
+  width: 160px;
+
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -352,22 +764,49 @@ text-transform: uppercase;
 }
 
 .searching-results__rating {
+  width: 160px;
+
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
 
   background-color: var(--basic-light);
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .searching-results__load-more {
+  display: block;
+  width: 625px;
+  margin: 0 auto;
+
   font-size: 20px;
   line-height: 26px;
 
   background-color: var(--special-cold-light);
 }
 
-.searching-results__legend {
-  line-height: 23px;
+.pagination {
+  display: flex;
+  width: 1057px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
+}
+
+.pagination__list {
+  display: flex;
+}
+
+.pagination__item {
+  min-width: 55px;
+  min-height: 55px;
+
+  margin-right: 8px;
+
+  outline: tomato solid 5px;
+  outline-offset: -5px;
 }
 
 .pagination__link {
@@ -382,6 +821,16 @@ text-transform: uppercase;
 .pagination__link_current {
   color: var(--basic-black);
   background-color: var(--basic-light);
+}
+
+.pagination__form {
+  width: 386px;
+
+  margin-left: auto;
+}
+
+.pagination__select-list-lable {
+  line-height: 23px;
 }
 
 .catalog-main .subscription {
