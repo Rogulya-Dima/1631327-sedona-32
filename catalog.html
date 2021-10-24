@@ -8,12 +8,12 @@
   <body>
     <header class="page-header">
       <nav class="main-menu">
-        <ul class="main-menu__list list-reset">
+        <ul class="list-reset main-menu__list">
           <li class="main-menu__item">
-            <a class="main-menu__link link-reset" href="index.html">Главная</a>
+            <a class="link-reset main-menu__link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link link-reset" href="#">О Седоне</a>
+            <a class="link-reset main-menu__link" href="#">О Седоне</a>
           </li>
           <li class="main-menu__item">
             <a class="main-menu__link main-menu__link_current">Гостиницы</a>
@@ -23,7 +23,7 @@
       <a class="logo">
         <img class="logo__image" src="img/logo/logo-sedona.svg" width="138" height="70" alt="Логотип сайта Седона">
       </a>
-      <ul class="user-menu list-reset">
+      <ul class="list-reset user-menu">
         <li class="user-menu__item">
           <a class="user-menu__link" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="user-menu__item">
-          <a class="user-menu__link link-reset button" href="#">Хочу сюда!</a>
+          <a class="button link-reset user-menu__link" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </header>
@@ -43,7 +43,7 @@
       <div class="bread-crumbs-and-searching-filter-wrapper">
         <section class="bread-crumbs">
           <h1 class="bread-crumbs__title">Гостиницы Седоны</h1>
-          <ul class="bread-crumbs__list list-reset">
+          <ul class="list-reset bread-crumbs__list">
             <li class="bread-crumbs__item">
               <span class="visually-hidden">Главная страница</span>
             </li>
@@ -53,11 +53,11 @@
         <section class="searching-filter">
           <h2 class="visually-hidden">Фильтр поиска.</h2>
           <form class="searching-filter__form" action="https://echo.htmlacademy.ru/" method="GET">
-            <ul class="searching-filter__list list-reset">
-              <li class="searching-filter__item infrastructure">
-                <fieldset class="searching-filter__fieldset fieldset-reset">
+            <ul class="list-reset searching-filter__list">
+              <li class="searching-filter__item input-checkbox">
+                <fieldset class="fieldset-reset searching-filter__fieldset">
                   <legend class="searching-filter__legend">Инфраструктура:</legend>
-                   <ul class="searching-filter__inner-list list-reset">
+                   <ul class="list-reset searching-filter__inner-list">
                     <li class="searching-filter__inner-item">
                       <label class="searching-filter__label">
                         <input class="searching-filter__input checkbox" type="checkbox" name="pool" checked> Бассейн
@@ -76,10 +76,10 @@
                   </ul>
                 </fieldset>
               </li>
-              <li class="searching-filter__item housing">
-                <fieldset class="searching-filter__fieldset fieldset-reset">
+              <li class="searching-filter__item input-radio">
+                <fieldset class="fieldset-reset searching-filter__fieldset">
                   <legend class="searching-filter__legend">Тип жилья:</legend>
-                  <ul class="searching-filter__inner-list list-reset">
+                  <ul class="list-reset searching-filter__inner-list">
                     <li class="searching-filter__inner-item">
                       <label class="searching-filter__label">
                         <input class="searching-filter__input radio" type="radio" name="housing-type" value="hotel" checked> Гостиница
@@ -99,7 +99,7 @@
                 </fieldset>
               </li>
               <li class="searching-filter__item price">
-                <fieldset class="searching-filter__fieldset fieldset-reset">
+                <fieldset class="fieldset-reset searching-filter__fieldset">
                   <legend class="searching-filter__legend">Стоимость, ₽:</legend>
                   <div class="searching-filter__price-controls">
                     <label class="searching-filter__label">
@@ -120,28 +120,28 @@
               </li>
             </ul>
             <div class="searching-filter__button-wrapper">
-              <button class="searching-filter__submit button" type="submit">Применить</button>
+              <button class="button searching-filter__submit" type="submit">Применить</button>
               <button class="searching-filter__reset" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
       </div>
       <section class="searching-results">
-        <div class="searching-results__head-wrapper">
+        <div class="searching-results__container">
           <h2 class="visually-hidden">Результаты поиска.</h2>
           <p class="searching-results__text">Найдено гостиниц: 38</p>
           <form class="searching-results__form" action="https://echo.htmlacademy.ru/" method="GET">
             <fieldset class="fieldset-reset">
-              <legend>
+              <legend class="searching-results__legend">
                 <span class="visually-hidden">Порядок сортировки отображения результатов на странице.</span>
               </legend>
-              <select class="searching-results__display-price-list" name="order-of-display">
+              <select class="searching-results__price-list" name="order-of-display">
                 <option class="searching-results__display-price-option" value="min-price-first">Сначала дешевые</option>
                 <option class="searching-results__display-price-option" value="max-price-first">Сначала дорогие</option>
               </select>
             </fieldset>
           </form>
-          <ul class="searching-results__display-list list-reset">
+          <ul class="list-reset searching-results__display-list">
             <li class="searching-results__display-item">
               <button class="searching-results__display-button" type="button">
                 <span class="visually-hidden">Показать результаты в виде плиток.</span>
@@ -159,77 +159,77 @@
             </li>
           </ul>
         </div>
-        <ul class="searching-results__list list-reset">
-          <li class="searching-results__list-item">
+        <ul class="list-reset searching-results__list">
+          <li class="searching-results__item">
             <img class="searching-results__item-image" src="img/searching-results/amara-resort.jpg" width="180" height="120" alt="Здание гостиницы, на склоне красной скалы.">
-            <div class="searching-results__info-wrapper">
+            <div class="searching-results__item-container">
               <h3 class="searching-results__item-title">Amara Resort & Spa</h3>
               <p class="searching-results__item-name">Гостиница</p>
               <p class="searching-results__item-price">От 4000 ₽</p>
-              <a class="searching-results__more-details button link-reset" href="#">подробнее</a>
-              <button class="searching-results__to-favorites button" type="button">В избранное</button>
+              <a class="button link-reset searching-results__more-details" href="#">подробнее</a>
+              <button class="button searching-results__to-favorites" type="button">В избранное</button>
             </div>
             <p class="searching-results__rating">Рейтинг: 8,5</p>
           </li>
-          <li class="searching-results__list-item">
+          <li class="searching-results__item">
             <img class="searching-results__item-image" src="img/searching-results/desert-quail.jpg" width="180" height="120" alt="Здание отеля в зеленой долине, на фоне скал.">
-            <div class="searching-results__info-wrapper">
+            <div class="searching-results__item-container">
               <h3 class="searching-results__item-title">Desert Quail Inn</h3>
               <p class="searching-results__item-name">Мотель</p>
               <p class="searching-results__item-price">От 3000 ₽</p>
-              <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
-              <button class="searching-results__to-favorites button" type="button">В избранное</button>
+              <a class="button link-reset searching-results__more-details" href="#">Подробнее</a>
+              <button class="button searching-results__to-favorites" type="button">В избранное</button>
             </div>
             <p class="searching-results__rating">Рейтинг: 8,9</p>
           </li>
-          <li class="searching-results__list-item">
+          <li class="searching-results__item">
             <img class="searching-results__item-image" src="img/searching-results/poco-diablo.jpg" width="180" height="120" alt="Красные скалы, у подножья которых зеленая роща.">
-            <div class="searching-results__info-wrapper">
+            <div class="searching-results__item-container">
               <h3 class="searching-results__item-title">Villas at Poco Diablo</h3>
               <p class="searching-results__item-name">Апартаменты</p>
               <p class="searching-results__item-price">От 2000 ₽</p>
-              <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
-              <button class="searching-results__to-favorites in-favorites button" type="button">В избранном</button>
+              <a class="button link-reset searching-results__more-details" href="#">Подробнее</a>
+              <button class="button searching-results__to-favorites in-favorites" type="button">В избранном</button>
             </div>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
-          <li class="searching-results__list-item">
+          <li class="searching-results__item">
             <img class="searching-results__item-image" src="img/searching-results/green-tree.jpg" width="180" height="120" alt="Серпантин, по средине горного леса.">
-            <div class="searching-results__info-wrapper">
+            <div class="searching-results__item-container">
               <h3 class="searching-results__item-title">GreenTree Inn</h3>
               <p class="searching-results__item-name">Гостиница</p>
               <p class="searching-results__item-price">От 3000 ₽</p>
-              <a class="searching-results__more-details button link-reset" href="#">Подробнее</a>
-              <button class="searching-results__to-favorites button" type="button">В избранное</button>
+              <a class="button link-reset searching-results__more-details" href="#">Подробнее</a>
+              <button class="button searching-results__to-favorites" type="button">В избранное</button>
             </div>
             <p class="searching-results__rating">Рейтинг: 9,2</p>
           </li>
         </ul>
-        <button class="searching-results__load-more button" type="button">Загрузить еще</button>
+        <button class="button searching-results__load-more" type="button">Загрузить еще</button>
         <section class="pagination">
           <h2 class="visually-hidden">Пагинация</h2>
-          <ul class="pagination__list list-reset">
+          <ul class="list-reset pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link_current link-reset">1</a>
+              <a class="link-reset pagination__link pagination__link_current">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link link-reset" href="#">2</a>
+              <a class="link-reset pagination__link" href="#">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link link-reset" href="#">3</a>
+              <a class="link-reset pagination__link" href="#">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link link-reset" href="#">4</a>
+              <a class="link-reset pagination__link" href="#">4</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link link-reset" href="#">...</a>
+              <a class="link-reset pagination__link" href="#">...</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link link-reset" href="#">10</a>
+              <a class="link-reset pagination__link" href="#">10</a>
             </li>
           </ul>
           <form class="pagination__form" action="https://echo.htmlacademy.ru/" method="GET">
-            <fieldset class="pagination__fieldset fieldset-reset">
+            <fieldset class="fieldset-reset pagination__fieldset">
               <label class="pagination__select-list-lable" for="pagination__select-list-id">Гостиниц на странице:</label>
               <select class="pagination__select-list" name="order-of-display" id="pagination__select-list-id">
                 <option class="pagination__select-option" value="4">4</option>
@@ -239,8 +239,8 @@
         </section>
       </section>
       <section class="subscription">
-        <h2 class="subscription__title title">Подпишитесь на рассылку</h2>
-        <p class="subscription__subtitle subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="title subscription__title">Подпишитесь на рассылку</h2>
+        <p class="subtitle subscription__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="POST">
           <label>
             <input class="subscription__input" type="email" name="user-email" placeholder="Ваш e-mail">
@@ -250,7 +250,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="page-footer__socials-list list-reset">
+      <ul class="list-reset page-footer__socials-list">
         <li class="socials-list__item">
           <a class="socials-list__link twitter" href="https://twitter.com/htmlacademy_ru" target="blank">
             <img src="/img/socials/twitter.svg" width="18" height="15" alt="Твиттер.">
@@ -271,7 +271,7 @@
         <span class="visually-hidden">Телефон для связи</span>
         <a class="contact-phone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
-      <a class="page-footer__logo-site-developer" href="https://htmlacademy.ru/">
+      <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
         <img class="logo-site-developer__image" src="img/logo/logo-htmlacademy.svg" width="115" height="34" alt="Логотип студии разработчика сайта htmlacademy">
       </a>
     </footer>
