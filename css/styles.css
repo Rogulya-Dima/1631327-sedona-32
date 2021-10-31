@@ -424,7 +424,7 @@ img {
 
 .subscription__subtitle {
   width: 470px;
-  margin-bottom: 49px;
+  margin-bottom: 47px;
 }
 
 .subscription__title,
@@ -563,7 +563,7 @@ img {
 
 .bread-crumbs-and-searching-filter-wrapper {
   padding-top: 32px;
-  padding-bottom:70px;
+  padding-bottom:66px;
   margin-bottom: 45px;
 
   background-color: var(--basic-black06);
@@ -606,15 +606,17 @@ img {
 }
 
 .searching-filter__form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr min-content;
 
   outline: tomato solid 5px;
   outline-offset: -5px;
 }
 
 .searching-filter__list {
-  display: flex;
-  width: 827px;
+  display: grid;
+  grid-template-columns: 161px 161px 1fr;
+  column-gap: 57px;
 
   outline: tomato solid 5px;
   outline-offset: -5px;
@@ -626,26 +628,31 @@ img {
 
 .searching-filter__item.input-checkbox,
 .searching-filter__item.input-radio {
-  width: 155px;
-
   outline: tomato solid 5px;
   outline-offset: -5px;
 }
 
 .searching-filter__item.input-checkbox {
-  margin-right: 60px;
+  grid-column: 1/2;
+}
+
+.searching-filter__item.input-radio {
+  grid-column: 2/3;
 }
 
 .searching-filter__item.price {
   width: 297px;
-  margin-left: auto;
+  margin-right:69px;
+
+  justify-self: end;
 
   outline: tomato solid 5px;
   outline-offset: -5px;
 }
 
 .searching-filter__legend {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 20px;
@@ -654,7 +661,7 @@ img {
 }
 
 .searching-filter__label {
-  padding-left: 18px;
+  padding-left: 16px;
 
   font-size: 18px;
   line-height: 23px;
@@ -701,14 +708,12 @@ img {
 }
 
 .searching-filter__button-wrapper {
-  width: 167px;
-  margin-left: auto;
   display: flex;
   flex-direction: column;
 }
 
 .searching-filter__submit {
-  margin-top: auto 5px 5px 5px;
+  margin: auto 0 7px 0;
   padding: 15px 35px;
 
   font-size: 16px;
@@ -737,7 +742,7 @@ img {
 
 .searching-results__container {
   display: flex;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   outline: tomato solid 5px;
   outline-offset: -5px;
@@ -759,7 +764,7 @@ img {
 
 .searching-results__price-list {
   width: 285px;
-  padding: 10px 18px;
+  padding: 10px 12px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -814,7 +819,9 @@ img {
 }
 
 .searching-results__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 180px 36px min-content min-content 1fr min-content;
+  grid-template-rows: 31px 54px;
   padding: 28px 0;
 
   outline: tomato solid 5px;
@@ -822,23 +829,18 @@ img {
 }
 
 .searching-results__item-image {
+  grid-column: 1/2;
+  grid-row: 1/-1;
   width: 180px;
   height: 120px;
+  margin-top: 3px;
 
-  margin-right: 36px;
-}
-
-.searching-results__item-container {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  margin-right: auto;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
+  object-fit: cover;
 }
 
 .searching-results__item-title {
+  grid-column: 3/6;
+  grid-row: 1/2;
   margin: 0;
 
   font-weight: 700;
@@ -846,31 +848,33 @@ img {
   line-height: 31px;
 }
 
-.searching-results__name-and-price-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 320px;
-  margin-bottom: 31px;
-}
-
 .searching-results__item-name,
 .searching-results__item-price {
-  width: 160px;
   margin: 0;
   padding: 0;
 
   line-height: 23px;
   color: var(--basic-dark);
 }
+.searching-results__item-name {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin-right: 8px;
+}
 
-.searching-results__buttons-container {
-  display: flex;
+.searching-results__item-price {
+  grid-column: 4/5;
+  grid-row: 2/3;
 }
 
 .searching-results__more-details {
   display: block;
+  box-sizing: border-box;
+  min-width: 151px;
   padding:10px 32px;
   margin-right: 8px;
+  grid-column: 3/4;
+  grid-row: 3/4;
 
   font-size: 16px;
   color: var(--basic-white);
@@ -880,7 +884,10 @@ img {
 
 .searching-results__to-favorites {
   display: block;
-  padding:10px 30px;
+  box-sizing: border-box;
+  min-width: 160px;
+  grid-column: 4/5;
+  grid-row: 3/4;
 
   font-size: 16px;
   line-height: 21px;
@@ -896,8 +903,11 @@ img {
 
 .searching-results__rating {
   width: 160px;
-  margin: auto 0 0 0;
+  margin: 0;
   padding: 10px 0;
+  grid-column: -1/-2;
+  grid-row: 3/4;
+  justify-self: end;
 
   font-size: 16px;
   text-align: center;
