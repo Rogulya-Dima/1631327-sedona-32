@@ -27,8 +27,6 @@
   --special-cold-light20: rgba(131, 179, 211, 0.2);
   --special-warm-light: #756257;
   --special-neutral-light: #7DB54F;
-  --basic-background: #8fadba;
-  --basic-background-input:#F2F2F2;
 }
 
 /* Global styles*/
@@ -44,6 +42,10 @@
 }
 .container {
   padding: 0 71px;
+}
+
+.header-and-footer-container {
+  padding: 0 60px;
 }
 
 html {
@@ -64,7 +66,7 @@ body {
   line-height: 21px;
   color: var(--basic-black);
 
-  background-color: var(--basic-white);
+  background-color: var(--basic-light);
 }
 
 img {
@@ -127,25 +129,19 @@ img {
 
 .page-header {
   display: flex;
-  padding: 0 60px;
 
-  outline: tomato solid 5px;
-  outline-offset: -5px;
+  background-color: var(--basic-white);
 }
 
 .main-menu {
   width: 355px;
   margin-right: 120px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .main-menu__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .main-menu__item {
@@ -166,9 +162,6 @@ img {
   width: 138px;
   height: 65px;
   margin: 0 205px 0 0;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .page-header .logo__image {
@@ -181,9 +174,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   width: 270px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .user-menu__item {
@@ -209,11 +199,10 @@ img {
 .index-main {
   flex-grow: 1;
 
-  outline: tomato solid 5px;
-  outline-offset: -5px;
+  background-color: var(--basic-white);
 }
 
-.introduction__banner{
+.introduction__banner {
   height: 485px;
   margin-bottom: 63px;
 
@@ -222,16 +211,10 @@ img {
 
 .introduction__title {
   margin-bottom: 37px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .introduction__subtitle {
   margin-bottom: 85px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .benefits__list {
@@ -361,17 +344,12 @@ img {
 }
 
 .hotel-search {
-  padding: 89px 0;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
+  padding-top: 89px;
+  padding-bottom: 89px;
 }
 
 .hotel-search__title {
   margin-bottom: 30px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .hotel-search__subtitle {
@@ -380,9 +358,6 @@ img {
   margin-bottom: 60px;
 
   text-align: center;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .hotel-search__link {
@@ -397,9 +372,6 @@ img {
   color: var(--basic-white);
 
   border-radius: 10px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .subscription {
@@ -408,9 +380,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .index-main .subscription {
@@ -430,9 +399,6 @@ img {
 .subscription__title,
 .subscription__subtitle {
   color: var(--basic-white);
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .subscription__form {
@@ -454,7 +420,7 @@ img {
   border-top-left-radius:10px;
   border-bottom-left-radius:10px;
   border: none;
-  background-color: var(--basic-background-input);
+  background-color: var(--basic-light);
 }
 
 .subscription__input::-webkit-input-placeholder {
@@ -498,17 +464,16 @@ img {
   display: flex;
   justify-content: space-between;
 
-  padding: 38px 60px 30px 60px;
+  padding-top: 38px;
+  padding-bottom: 30px;
+
+  background-color: var(--basic-white);
 }
 
 .page-footer__socials-list {
-  width: 126px;
-
   display: flex;
   flex-wrap: wrap;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
+  width: 126px;
 }
 .socials-list__item {
   display: flex;
@@ -537,9 +502,6 @@ img {
   color: var(--basic-black);
 
   text-decoration: none;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .page-footer__logo-link {
@@ -550,15 +512,14 @@ img {
 .logo-site-developer__image {
   width: 115px;
   height: 34px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 /* catalog-main */
 
 .catalog-main {
   flex-grow: 1;
+
+  background-color: var(--basic-white);
 }
 
 .bread-crumbs-and-searching-filter-wrapper {
@@ -600,26 +561,17 @@ img {
 
   font-size: 16px;
   color: var(--basic-white);
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-filter__form {
   display: grid;
   grid-template-columns: 1fr min-content;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-filter__list {
   display: grid;
   grid-template-columns: 161px 161px 1fr;
   column-gap: 57px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-filter__item {
@@ -628,8 +580,6 @@ img {
 
 .searching-filter__item.input-checkbox,
 .searching-filter__item.input-radio {
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-filter__item.input-checkbox {
@@ -645,9 +595,6 @@ img {
   margin-right:69px;
 
   justify-self: end;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-filter__legend {
@@ -743,9 +690,6 @@ img {
 .searching-results__container {
   display: flex;
   margin-bottom: 34px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__text {
@@ -757,9 +701,6 @@ img {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__price-list {
@@ -774,9 +715,6 @@ img {
 
 .searching-results__form {
   margin-right: auto;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__form fieldset {
@@ -788,9 +726,6 @@ img {
   width: 163px;
   display: flex;
   flex-wrap: wrap;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__display-item {
@@ -798,9 +733,6 @@ img {
   min-height: 48px;
   margin-right: 8px;
   margin-bottom: 8px;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__display-item:nth-child(3n) {
@@ -813,9 +745,6 @@ img {
 
   display: flex;
   flex-direction: column;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__item {
@@ -823,9 +752,6 @@ img {
   grid-template-columns: 180px 36px min-content min-content 1fr min-content;
   grid-template-rows: 31px 54px;
   padding: 28px 0;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__item-image {
@@ -914,9 +840,6 @@ img {
   text-transform: uppercase;
 
   background-color: var(--basic-light);
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .searching-results__load-more {
@@ -937,9 +860,6 @@ img {
   display: flex;
   width: 1057px;
   padding: 30px 0;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .pagination__list {
@@ -952,9 +872,6 @@ img {
   min-width: 55px;
   min-height: 55px;
   margin: 0 8px 8px 0;
-
-  outline: tomato solid 5px;
-  outline-offset: -5px;
 }
 
 .pagination__link {
