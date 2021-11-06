@@ -634,16 +634,6 @@ img {
   color: var(--basic-white03);
 }
 
-/* Из за того что элемент в фокусе не получается увидеть :invalid,
-как с этим бороться? */
-.subscription__input:invalid {
-  outline-width: 2px;
-  outline-offset: -2px;
-  outline-style: solid;
-  outline-color:var(#FF5757);
-}
-
-
 /* Footer */
 
 .page-footer {
