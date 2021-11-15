@@ -82,6 +82,7 @@ body {
 
 img {
   display: block;
+  object-fit: cover;
 }
 
 .title {
@@ -162,7 +163,7 @@ img {
 
 .main-menu {
   width: 355px;
-  margin-right: 117px;
+  margin-right: 116px;
 }
 
 .main-menu__list {
@@ -218,7 +219,7 @@ img {
   display: block;
   width: 138px;
   height: 65px;
-  margin: 0 196px 0 0;
+  margin: 0 198px 0 0;
 }
 
 .page-header .logo__image {
@@ -230,20 +231,20 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 270px;
+  width: 266px;
 }
 
 .user-menu__item {
   margin: 0;
-  margin-right: 5px;
-}
-
-.user-menu__item.favorite {
-  position: relative;
+  margin-right: 3px;
 }
 
 .user-menu__item.visit {
   margin-left: auto;
+}
+
+.user-menu__item.favorite {
+  position: relative;
 }
 
 .user-menu__link {
@@ -281,7 +282,7 @@ img {
 }
 
 .button.user-menu__link {
-  padding: 10px 36px;
+  padding: 9px 36px;
   border-radius: 4px;
   background-color: var(--special-warm-light);
 }
@@ -343,7 +344,7 @@ img {
 
 .introduction__banner {
   height: 485px;
-  margin-bottom: 63px;
+  margin-bottom: 61px;
 
   background-image: url("../img/backgrounds/introduction.jpg");
 }
@@ -423,7 +424,7 @@ img {
 
 .benefits__title,
 .real-town-benefits-list__title {
-  width: 171px;
+  width: 172px;
   margin: 0 auto;
   margin-bottom: 28px;
 
@@ -532,11 +533,11 @@ img {
 }
 
 .subscription {
-  background-color: var(--basic-background);
+  background-color: var(--basic-dark);
   background-image: url("../img/backgrounds/subscrubes.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .index-main .subscription {
@@ -659,7 +660,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
 
-  padding-top: 22px;
+  padding-top: 20px;
   padding-bottom: 30px;
 
   background-color: var(--basic-white);
@@ -668,8 +669,8 @@ img {
 .page-footer__socials-list {
   display: flex;
   flex-wrap: wrap;
-  width: 127px;
-  margin-right: 50px;
+  width: 128px;
+  margin-right: 54px;
 }
 .socials-list__item {
   display: flex;
@@ -677,7 +678,7 @@ img {
   justify-content: center;
   min-width: 40px;
   min-height: 40px;
-  margin: 0 3px 3px 0;
+  margin: 0 4px 3px 0;
 }
 .socials-list__item:nth-child(3n) {
   margin-right: 0;
@@ -721,7 +722,7 @@ img {
   display: flex;
   justify-content: center;
 
-  margin-right: 30px;
+  margin-right: 24px;
 }
 
 .contact-phone__link {
@@ -730,6 +731,8 @@ img {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
+  text-align: center;
+
   color: var(--basic-black);
 
   text-decoration: none;
@@ -797,11 +800,11 @@ img {
 }
 
 .bread-crumbs-and-searching-filter-wrapper {
-  padding-top: 29px;
+  padding-top: 27px;
   padding-bottom:72px;
   margin-bottom: 45px;
 
-  background-color: var(--basic-black06);
+  background-color: var(--basic-dark);
   background-image: url("../img/backgrounds/searching-filter.jpg");
   background-repeat: repeat;
   background-position: center;
@@ -912,7 +915,7 @@ img {
 
 .searching-filter__item.price {
   width: 297px;
-  margin-right:69px;
+  margin-right:70px;
 
   justify-self: end;
 }
@@ -935,10 +938,11 @@ img {
   position: relative;
   display: flex;
 
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .searching-filter__label {
+  display: block;
   position: relative;
   padding-left: 39px;
 
@@ -1095,6 +1099,9 @@ img {
   outline-color: var(--basic-white);
 }
 
+/* Не сработало свойство appearance в хроме, помоги исправить.
+В фаирфоксе все работает.*/
+
 .searching-filter__min-price-input::-webkit-outer-spin-button,
 .searching-filter__max-price-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1167,8 +1174,8 @@ img {
 }
 
 .searching-filter__submit {
-  margin: auto 0 7px 0;
-  padding: 12px 35px;
+  margin: auto 0 6px 0;
+  padding: 11px 35px;
 
   font-size: 16px;
   line-height: 21px;
@@ -1229,7 +1236,7 @@ img {
 }
 
 .searching-results {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 .searching-results__container {
@@ -1239,8 +1246,8 @@ img {
 
 .searching-results__text {
   width: 340px;
-  margin: 0 192px 0 0;
-  padding-top: 5px;
+  margin: 0 189px 0 0;
+  padding-top: 3px;
 
   font-weight: 700;
   font-size: 30px;
@@ -1250,7 +1257,7 @@ img {
 
 .searching-results__price-list {
   width: 285px;
-  padding: 10px 12px;
+  padding: 10px 18px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -1300,14 +1307,14 @@ img {
 }
 
 .searching-results__display-list {
-  width: 163px;
+  width: 161px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .searching-results__display-item {
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-right: 9px;
+  margin-bottom: 7px;
 }
 
 .searching-results__display-item:nth-child(3n) {
@@ -1320,7 +1327,7 @@ img {
 }
 
 .searching-results__display-button {
-  min-width: 49px;
+  min-width: 47px;
   min-height: 45px;
 
   border-radius: 4px;
@@ -1367,7 +1374,7 @@ img {
 
 .searching-results__list {
   width: 1060px;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   display: flex;
   flex-direction: column;
@@ -1375,8 +1382,22 @@ img {
 
 .searching-results__item {
   display: grid;
-  grid-template-columns: 180px 37px min-content min-content 1fr min-content;
+  grid-template-columns: 180px 39px min-content min-content 1fr min-content;
   grid-template-rows: 32px 54px;
+
+  /* У меня в данном списке проблемы с переполнением, мое мнение, что заголовок не будет в 2 -3 строки,
+    как и название (гостиница, мотель) и стоимость. Но все таки, если брать скрипт для преполнения, то у меня строки
+     Amara Resort & Spa Гостиница От 4000 ₽ - ломаються. Все дело в том, что они фиксированны, если
+     задать грид строке значение мин-макс, то у меня не понятно откуда появляються лишние отступы и я не могу попасть в
+     пиксель перфект! Я не знаю как эти лишние отступы убрать. Надеюсь на твою помощь! В)*/
+
+     /* Опять изза того что строки ограничены по высоте, я не могу добавить еще кнопок, которые
+     по логике должны выстраиваться в вертикальную колону, т.к. имеют ограничения по ширине, но я не знаю насколько
+     уместно переполнение в этом блоке кнопками, мне кажется любое переполнение здесь
+      может быть только с помощют изменения кода грида... */
+
+  /* grid-template-rows:    minmax(32px, 1fr) minmax(54px, 1fr); */
+
   box-sizing: border-box;
   padding: 27px 0 26px 0;
 
@@ -1445,7 +1466,7 @@ img {
 
 .searching-results__title-link:focus .searching-results__item-title {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-cold-light);
   outline-style: solid;
 }
@@ -1479,7 +1500,7 @@ img {
   box-sizing: border-box;
   min-width: 151px;
   padding: 9px 32px;
-  margin-right: 8px;
+  margin-right: 7px;
   grid-column: 3/4;
   grid-row: 3/4;
 
@@ -1496,7 +1517,7 @@ img {
 
 .searching-results__more-details:focus {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-cold-light);
   outline-style: solid;
   background-color: var(--special-warm-dark);
@@ -1529,7 +1550,7 @@ img {
 
 .searching-results__to-favorites:focus {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-warm-dark);
   outline-style: solid;
   background-color: var(--special-cold-dark);
@@ -1551,7 +1572,7 @@ img {
 
 .searching-results__to-favorites.in-favorites:focus {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-warm-dark);
   outline-style: solid;
   background-color: var(--special-neutral-dark);
@@ -1567,7 +1588,7 @@ img {
   grid-row: 1/2;
   display: flex;
   justify-content: center;
-  margin:7px 0px 0px 5px;
+  margin:7px 0 0 0;
 }
 
 .searching-results__rating-stars-item {
@@ -1604,8 +1625,8 @@ img {
 .searching-results__load-more {
   display: block;
   width: 625px;
-  margin: 0 auto 30px auto;
-  padding: 13px 0 18px 0;
+  margin: 0 auto 29px auto;
+  padding: 13px 0 17px 0;
 
   font-size: 20px;
   line-height: 26px;
@@ -1622,7 +1643,7 @@ img {
 
 .searching-results__load-more:focus {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-warm-dark);
   outline-style: solid;
   background-color: var(--special-cold-dark);
@@ -1654,7 +1675,7 @@ img {
 .pagination__link {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 16px;
 
   font-weight: 700;
   font-size: 20px;
@@ -1677,7 +1698,7 @@ img {
 
 .pagination__link:focus {
   outline-width: 3px;
-  outline-offset: -3  px;
+  outline-offset: -3px;
   outline-color: var(--special-warm-light);
   outline-style: solid;
   background-color: var(--special-cold-dark);
@@ -1774,7 +1795,7 @@ img {
   top: 50px;
   grid-template-rows: 1fr 60px;
   width: 400px;
-  min-height: 232px;
+  min-height: 230px;
 
   background-color: var(--basic-white);
   border-radius: 20px;
@@ -1809,7 +1830,7 @@ img {
   display: flex;
   justify-content: space-between;
   width: 350px;
-  min-height: 48px;
+  min-height: 47px;
 }
 
 .user-menu__popup-item + .user-menu__popup-item {
@@ -1818,8 +1839,8 @@ img {
 
 .user-menu_popup-img-and-text-link {
   display: grid;
-  grid-template-columns: 48px 17px auto;
-  grid-template-rows: 21px;
+  grid-template-columns: 49px 16px auto;
+  grid-template-rows: 19px;
 }
 
 .user-menu_popup-img-and-text-link:hover {
@@ -1843,8 +1864,8 @@ img {
 .user-menu__popup-item-image {
   grid-column: 1/2;
   grid-row: 1/2;
-  width: 48px;
-  height: 48px;
+  width: 47px;
+  height: 45px;
 
   object-fit: cover;
   border-radius: 50%;
@@ -1875,6 +1896,7 @@ img {
 .user-menu__popup-item-delete {
   position: relative;
   left: 10px;
+  top: -3px;
 
   width: 36px;
   height: 36px;
@@ -1934,6 +1956,9 @@ img {
 
 /* modal-container  */
 
+/* На переполнение не проверял, на вебинаре сказали на переполнение такие
+ формы не проверять */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1944,6 +1969,8 @@ img {
   height: 100%;
 
   background-color: rgba(242, 242, 242, 0.8);
+
+  z-index: 2;
 }
 
 .modal-container-show {
@@ -1954,7 +1981,7 @@ img {
   position: relative;
   box-sizing: border-box;
   margin: auto;
-  padding: 62px 70px 70px 70px;
+  padding: 58px 70px 66px 70px;
   width: 715px;
 
   background-color: var(--basic-white);
@@ -2006,7 +2033,7 @@ img {
 }
 
 .page-modal__title {
-  margin: 0 0 60px 0;
+  margin: 0 0 64px 0;
 
   line-height: 40px;
   font-size: 30px;
@@ -2034,12 +2061,17 @@ img {
 
 .page-modal__item {
   position:relative;
+  top:-3px;
   display: grid;
-  grid-template-columns: 155px 420px;
+  grid-template-columns: 157px 419px;
   grid-template-rows: 50px 29px;
   align-items: stretch;
 
   margin-bottom: 11px;
+}
+
+.page-modal__item:last-child {
+  margin-bottom: 0;
 }
 
 .page-modal__item:last-child {
@@ -2059,6 +2091,7 @@ img {
   grid-column: 2/3;
   grid-row: 1/2;
 
+  box-sizing: border-box;
   padding: 10px 35px 10px 19px;
 
   font-family: inherit;
@@ -2134,7 +2167,9 @@ img {
 }
 
 .page-modal__input-number-container {
-  margin-bottom: 48px;
+  position: relative;
+  top:-3px;
+  margin-bottom: 40px;
 }
 
 .page-modal__input-number {
@@ -2358,11 +2393,11 @@ img {
   position: absolute;
   box-sizing: border-box;
 
-  top:397px;
-  right: 107px;
+  top:50px;
+  right: 35px;
 
   width: 256px;
-  padding: 20px 18px 24px 22px;
+  padding: 20px 18px 23px 23px;
 
   background-color: var(--basic-dark);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
