@@ -761,7 +761,7 @@ img {
 .page-footer__logo-link {
   position: relative;
   left:8px;
-  padding: 18px 19px 18px 19px;
+  padding: 24px 19px 18px 19px;
 }
 
 .page-footer__logo-link:hover path {
@@ -812,7 +812,7 @@ img {
 }
 
 .bread-crumbs {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .bread-crumbs__title {
@@ -1174,8 +1174,8 @@ img {
 }
 
 .searching-filter__submit {
-  margin: auto 0 6px 0;
-  padding: 11px 35px;
+  margin: auto 0 3px 0;
+  padding: 13px 35px;
 
   font-size: 16px;
   line-height: 21px;
@@ -1236,7 +1236,7 @@ img {
 }
 
 .searching-results {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .searching-results__container {
