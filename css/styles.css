@@ -319,7 +319,7 @@ img {
   outline: none;
 }
 
-.user-menu__item.favorite>.user-menu__link:active path {
+.favorite.user-menu__link:active path {
   fill: var(--special-warm-light03);
 }
 
