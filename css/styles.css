@@ -82,7 +82,6 @@ body {
 }
 
 img {
-  display: block;
   object-fit: cover;
 }
 
@@ -320,7 +319,7 @@ img {
   outline: none;
 }
 
-.user-menu__item.favorite .user-menu__link:active path {
+.user-menu__item.favorite>.user-menu__link:active path {
   fill: var(--special-warm-light03);
 }
 
